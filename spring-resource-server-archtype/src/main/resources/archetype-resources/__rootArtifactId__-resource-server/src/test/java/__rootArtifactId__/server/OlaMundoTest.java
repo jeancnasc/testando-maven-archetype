@@ -21,19 +21,7 @@ public class OlaMundoTest {
 
     @Test
     public void statusOk() throws Exception {
-//        RestTemplate client = new RestTemplate();
-
-//        ResponseEntity<RecursoStatus> resposta = client.getForEntity("http://localhost:8080/status", RecursoStatus.class);
-//
-//        assertNotNull(resposta);
-//        assertEquals(HttpStatus.OK,resposta.getStatusCode());
-//        assertNotNull(resposta.getBody());
-//        assertEquals("",resposta.getBody().getNome());
-//        assertEquals("",resposta.getBody().getMensagem());
-//        assertEquals(Status.OK,resposta.getBody().getStatus());
-//        assertNotNull(resposta.getBody().getDependencias());
-//        assertEquals(2,resposta.getBody().getDependencias().size());
-        mvc.perform(MockMvcRequestBuilders.get("/olamundo"))
+        mvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Olá Mundo!"));
 
